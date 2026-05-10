@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Envelope = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,7 @@ Anneler Günün Kutlu Olsun. Seni Çok Seviyorum.`;
 
   return (
     <div className="relative flex items-center justify-center p-4 perspective-1000">
-      <div 
+      <div
         className="relative cursor-pointer w-[300px] h-[200px] sm:w-[450px] sm:h-[300px]"
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -29,29 +29,32 @@ Anneler Günün Kutlu Olsun. Seni Çok Seviyorum.`;
         </div>
 
         {/* Envelope Flap */}
-        <motion.div 
+        <motion.div
           className="absolute top-0 left-0 right-0 h-1/2 bg-soft-pink rounded-t-lg origin-top z-30 shadow-sm border-b border-white/20"
           initial={false}
           animate={{ rotateX: isOpen ? 180 : 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          style={{ transformStyle: 'preserve-3d', backfaceVisibility: 'hidden' }}
+          style={{
+            transformStyle: "preserve-3d",
+            backfaceVisibility: "hidden",
+          }}
         >
           <div className="absolute inset-0 bg-soft-pink flex items-center justify-center rounded-t-lg">
-             <div className="w-12 h-12 rounded-full bg-white/50 border-2 border-rose-dust flex items-center justify-center text-rose-dust">
-               ❤️
-             </div>
+            <div className="w-12 h-12 rounded-full bg-white/50 border-2 border-rose-dust flex items-center justify-center text-rose-dust">
+              ❤️
+            </div>
           </div>
         </motion.div>
 
         {/* Letter */}
         <motion.div
           className="absolute left-4 right-4 bg-white p-6 sm:p-10 rounded shadow-lg z-20"
-          initial={{ bottom: '10%', scale: 0.95 }}
-          animate={{ 
-            bottom: isOpen ? '12%' : '10%',
-            y: isOpen ? -40 : 0,
+          initial={{ bottom: "10%", scale: 0.95 }}
+          animate={{
+            bottom: isOpen ? "10%" : "0%",
+            y: isOpen ? -70 : 0,
             scale: isOpen ? 1.1 : 0.95,
-            zIndex: isOpen ? 40 : 20
+            zIndex: isOpen ? 40 : 20,
           }}
           transition={{ duration: 0.8, delay: isOpen ? 0.3 : 0 }}
         >
@@ -89,8 +92,12 @@ Anneler Günün Kutlu Olsun. Seni Çok Seviyorum.`;
 
         {/* Envelope Front (V-Shape) */}
         <div className="absolute inset-0 z-[25] pointer-events-none">
-            <div className="absolute bottom-0 left-0 w-full h-full bg-soft-pink/50 shadow-inner rounded-lg" 
-                 style={{ clipPath: 'polygon(0 0, 50% 50%, 100% 0, 100% 100%, 0 100%)' }} />
+          <div
+            className="absolute bottom-0 left-0 w-full h-full bg-soft-pink/50 shadow-inner rounded-lg"
+            style={{
+              clipPath: "polygon(0 0, 50% 50%, 100% 0, 100% 100%, 0 100%)",
+            }}
+          />
         </div>
       </div>
 
