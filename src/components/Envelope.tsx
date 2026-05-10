@@ -49,10 +49,10 @@ Anneler Günün Kutlu Olsun. Seni Çok Seviyorum.`;
         {/* Letter */}
         <motion.div
           className="absolute left-4 right-4 bg-white p-6 sm:p-10 rounded shadow-lg z-20"
-          initial={{ bottom: "10%", scale: 0.95 }}
+          initial={{ bottom: "0%", scale: 0.95 }}
           animate={{
-            bottom: isOpen ? "10%" : "0%",
-            y: isOpen ? -70 : 0,
+            bottom: isOpen ? "10%" : "-10%",
+            y: isOpen ? 0 : 0,
             scale: isOpen ? 1.1 : 0.95,
             zIndex: isOpen ? 40 : 20,
           }}
