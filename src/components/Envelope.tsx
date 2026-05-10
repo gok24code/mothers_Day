@@ -54,7 +54,7 @@ Anneler Günün Kutlu Olsun. Seni Çok Seviyorum.`;
             bottom: isOpen ? "-70%" : "0%",
             y: isOpen ? -40 : 0,
             scale: isOpen ? 1.1 : 0.95,
-            zIndex: isOpen ? 40 : 20 /*commit id*/,
+            zIndex: isOpen ? 40 : 20,
           }}
           transition={{ duration: 0.8, delay: isOpen ? 0.3 : 0 }}
         >
