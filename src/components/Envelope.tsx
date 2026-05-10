@@ -71,8 +71,8 @@ Anneler Günün Kutlu Olsun. Seni Çok Seviyorum.`;
         </motion.div>
 
         {/* Envelope Front (V-Shape) */}
-        <div className="absolute inset-0 z-25 pointer-events-none">
-            <div className="absolute bottom-0 left-0 w-full h-full bg-soft-pink/50 clip-path-envelope shadow-inner rounded-lg" 
+        <div className="absolute inset-0 z-[25] pointer-events-none">
+            <div className="absolute bottom-0 left-0 w-full h-full bg-soft-pink/50 shadow-inner rounded-lg" 
                  style={{ clipPath: 'polygon(0 0, 50% 50%, 100% 0, 100% 100%, 0 100%)' }} />
         </div>
       </div>
