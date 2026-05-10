@@ -15,7 +15,7 @@ Ellerinden öper, kalbindeki o sonsuz şefkatin hiç eksilmemesini dilerim.
 Anneler Günün Kutlu Olsun. Seni Çok Seviyorum.`;
 
   return (
-    <div className="relative flex items-center justify-center min-h-screen p-4 perspective-1000">
+    <div className="relative flex items-center justify-center p-4 perspective-1000">
       <div 
         className="relative cursor-pointer w-[300px] h-[200px] sm:w-[450px] sm:h-[300px]"
         onClick={() => setIsOpen(!isOpen)}
@@ -48,8 +48,8 @@ Anneler Günün Kutlu Olsun. Seni Çok Seviyorum.`;
           className="absolute left-4 right-4 bg-white p-6 sm:p-10 rounded shadow-lg z-20"
           initial={{ bottom: '10%', scale: 0.95 }}
           animate={{ 
-            bottom: isOpen ? '20%' : '10%',
-            y: isOpen ? -250 : 0,
+            bottom: isOpen ? '15%' : '10%',
+            y: isOpen ? -120 : 0,
             scale: isOpen ? 1.1 : 0.95,
             zIndex: isOpen ? 40 : 20
           }}
