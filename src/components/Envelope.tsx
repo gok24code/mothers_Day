@@ -49,7 +49,7 @@ Anneler Günün Kutlu Olsun. Seni Çok Seviyorum.`;
           initial={{ bottom: '10%', scale: 0.95 }}
           animate={{ 
             bottom: isOpen ? '15%' : '10%',
-            y: isOpen ? -120 : 0,
+            y: isOpen ? -80 : 0,
             scale: isOpen ? 1.1 : 0.95,
             zIndex: isOpen ? 40 : 20
           }}
@@ -58,11 +58,28 @@ Anneler Günün Kutlu Olsun. Seni Çok Seviyorum.`;
           <div className="font-cursive text-rose-dust text-lg sm:text-2xl leading-relaxed whitespace-pre-line">
             {isOpen ? (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.8 }}
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  visible: {
+                    transition: {
+                      staggerChildren: 0.03,
+                      delayChildren: 0.8,
+                    },
+                  },
+                }}
               >
-                {message}
+                {message.split("").map((char, index) => (
+                  <motion.span
+                    key={index}
+                    variants={{
+                      hidden: { opacity: 0 },
+                      visible: { opacity: 1 },
+                    }}
+                  >
+                    {char}
+                  </motion.span>
+                ))}
               </motion.div>
             ) : (
               <div className="text-center opacity-40">Dokun ve Aç...</div>
