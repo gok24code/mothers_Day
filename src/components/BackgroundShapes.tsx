@@ -14,7 +14,7 @@ const BackgroundShapes = () => {
       size: Math.random() * (30 - 15) + 15,
       duration: Math.random() * (15 - 8) + 8,
       delay: Math.random() * 10,
-      type: Math.random() > 0.5 ? 'heart' : 'petal' as const,
+      type: (Math.random() > 0.5 ? 'heart' : 'petal') as 'heart' | 'petal',
     }));
     setShapes(newShapes);
   }, []);
