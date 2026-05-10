@@ -52,7 +52,7 @@ Anneler Günün Kutlu Olsun. Seni Çok Seviyorum.`;
           initial={{ bottom: "0%", scale: 0.95 }}
           animate={{
             bottom: isOpen ? "10%" : "-10%",
-            y: isOpen ? 40 : 0,
+            y: isOpen ? 100 : 0,
             scale: isOpen ? 1.1 : 0.95,
             zIndex: isOpen ? 40 : 20 /*commit id*/,
           }}
